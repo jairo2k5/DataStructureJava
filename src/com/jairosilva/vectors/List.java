@@ -64,14 +64,27 @@ public class List<T> {
 	}
 
 	public int exists(T element) {
-		for(int i = 0; i < this.elements.length; i++) {
+		for(int i = 0; i < this.size; i++) {
+			if(this.elements[i].equals(element)) {
+				return 1;
+			}
+		}
+		return -1;
+	}
+
+	public boolean contains(T element) {
+		return this.exists(element) >= 0 ? true : false;
+	}
+	
+	public int lastIndex(T element) {
+		for(int i = this.size-1; i >= 0; i--) {
 			if(this.elements[i].equals(element)) {
 				return i;
 			}
 		}
 		return -1;
 	}
-
+	
 	@SuppressWarnings("unchecked")
 	private void increase() {
 		if(this.size == this.elements.length) {
