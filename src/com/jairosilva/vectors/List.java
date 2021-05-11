@@ -56,6 +56,10 @@ public class List<T> {
 		return returnElements.toString();
 	}
 
+	public T get(int position) {
+		return this.find(position);
+	}
+	
 	public T find(int position) {
 		if(!(position >= 0 && position < this.size)) {
 			throw new  IllegalArgumentException("Posição não existe!");
@@ -66,7 +70,7 @@ public class List<T> {
 	public int exists(T element) {
 		for(int i = 0; i < this.size; i++) {
 			if(this.elements[i].equals(element)) {
-				return 1;
+				return i;
 			}
 		}
 		return -1;
@@ -107,4 +111,20 @@ public class List<T> {
 		this.size--;
 	}
 	
+	public void remove(T element) {
+		int pos = this.exists(element);
+		if(pos >= 0) {
+			this.remove(pos);
+		}
+	}
+	
+	public void clear() {
+		for(int i = 0; i < this.size; i++) {
+			this.elements[i] = null;
+		}
+		this.size = 0;
+	}
+	
 }
+
+// 05
