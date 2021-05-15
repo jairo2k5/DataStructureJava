@@ -51,7 +51,7 @@ public class Vector {
 		if(!(position >= 0 && position < this.size)) {
 			throw new  IllegalArgumentException("Posição não existe!");
 		}
-		
+
 		increase();
 
 		// Move all elements
@@ -103,7 +103,7 @@ public class Vector {
 			this.elements = newElements;
 		}
 	}
-	
+
 	public void remove(int position) {
 		if(!(position >= 0 && position < this.size)) {
 			throw new  IllegalArgumentException("Posição não existe!");
@@ -114,7 +114,7 @@ public class Vector {
 		this.elements[this.size] = null;
 		this.size--;
 	}
-	
+
 }
 
 // * Class: 9

@@ -14,7 +14,7 @@ public class List<T> {
 		this.elements = (T[]) new Object[capacity];
 		this.size = 0;
 	}
-	
+
 	public boolean add(T element) {
 		increase();
 		if(this.size < this.elements.length) {
@@ -59,7 +59,7 @@ public class List<T> {
 	public T get(int position) {
 		return this.find(position);
 	}
-	
+
 	public T find(int position) {
 		if(!(position >= 0 && position < this.size)) {
 			throw new  IllegalArgumentException("Posição não existe!");
@@ -79,7 +79,7 @@ public class List<T> {
 	public boolean contains(T element) {
 		return this.exists(element) >= 0 ? true : false;
 	}
-	
+
 	public int lastIndex(T element) {
 		for(int i = this.size-1; i >= 0; i--) {
 			if(this.elements[i].equals(element)) {
@@ -88,7 +88,7 @@ public class List<T> {
 		}
 		return -1;
 	}
-	
+
 	@SuppressWarnings("unchecked")
 	private void increase() {
 		if(this.size == this.elements.length) {
@@ -110,21 +110,19 @@ public class List<T> {
 		this.elements[this.size] = null;
 		this.size--;
 	}
-	
+
 	public void remove(T element) {
 		int pos = this.exists(element);
 		if(pos >= 0) {
 			this.remove(pos);
 		}
 	}
-	
+
 	public void clear() {
 		for(int i = 0; i < this.size; i++) {
 			this.elements[i] = null;
 		}
 		this.size = 0;
 	}
-	
-}
 
-// 05
+}

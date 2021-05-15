@@ -11,9 +11,9 @@ public class Contact {
 		this.phone = phone;
 		this.email = email;
 	}
-	
+
 	public Contact() {}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -74,7 +74,7 @@ public class Contact {
 			return false;
 		return true;
 	}
-	
-	
-	
+
+
+
 }
