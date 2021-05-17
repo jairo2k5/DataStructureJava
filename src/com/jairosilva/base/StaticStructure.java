@@ -1,8 +1,8 @@
 package com.jairosilva.base;
 
 public class StaticStructure<T> {
-	private T[] elements;
-	private int size;
+	protected T[] elements;
+	protected int size;
 
 	@SuppressWarnings("unchecked")
 	public StaticStructure(int size) {
@@ -67,6 +67,13 @@ public class StaticStructure<T> {
 			}
 		}
 		return returnElements.toString();
+	}
+	
+	public boolean empty() {
+		if(this.size == 0) {
+			return true;
+		}
+		return false;
 	}
 
 }
