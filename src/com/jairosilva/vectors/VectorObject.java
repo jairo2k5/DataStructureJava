@@ -8,12 +8,12 @@ public class VectorObject {
 	public int getSize() {
 		return this.size;
 	}
-
+	
 	public VectorObject(int capacity) {
 		this.elements = new Object[capacity];
 		this.size = 0;
 	}
-
+	
 	public boolean add(Object element) {
 		increase();
 		if(this.size < this.elements.length) {
@@ -23,22 +23,17 @@ public class VectorObject {
 		} 
 		return false;
 	}
-
+	
 	public boolean add(int position, Object element) {
 		if(!(position >= 0 && position < this.size)) {
 			throw new  IllegalArgumentException("Posição não existe!");
 		}
-
 		increase();
-
-		// Move all elements
 		for(int i = this.size-1; i >= position; i--) {
 			this.elements[i+1] = this.elements[i];
 		}
-
 		this.elements[position] = element;
 		this.size++;
-
 		return false;
 	}
 
@@ -91,5 +86,4 @@ public class VectorObject {
 		this.elements[this.size] = null;
 		this.size--;
 	}
-
 }

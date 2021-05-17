@@ -14,28 +14,6 @@ public class Vector {
 		this.size = 0;
 	}
 
-	/* Old methods
-
-	public void add(String element) {
-		for(int i = 0; i < this.elements.length; i++) {
-			if(this.elements[i] == null) {
-				this.elements[i] = element;
-				break;
-			}
-		}
-	}
-
-	public void add(String element) throws Exception {
-		if(this.size < this.elements.length) {
-			this.elements[this.size] = element;
-			this.size++;
-		} else {
-			throw new Exception("O vetor já está cheio!");
-		}
-	}
-
-	 */
-
 	public boolean add(String element) {
 		increase();
 		if(this.size < this.elements.length) {
@@ -51,17 +29,12 @@ public class Vector {
 		if(!(position >= 0 && position < this.size)) {
 			throw new  IllegalArgumentException("Posição não existe!");
 		}
-
 		increase();
-
-		// Move all elements
 		for(int i = this.size-1; i >= position; i--) {
 			this.elements[i+1] = this.elements[i];
 		}
-
 		this.elements[position] = element;
 		this.size++;
-
 		return false;
 	}
 
@@ -116,5 +89,3 @@ public class Vector {
 	}
 
 }
-
-// * Class: 9
