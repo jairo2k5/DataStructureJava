@@ -59,10 +59,10 @@ public class StaticStructure<T> {
 	@Override
 	public String toString() {
 		StringBuilder returnElements = new StringBuilder();
-		for(T element:elements) {
-			if(element != null) {
+		for(int i = 0; i < this.size; i++) {
+			if(this.elements[i] != null) {
 				returnElements.append("[");
-				returnElements.append(element);
+				returnElements.append(this.elements[i]);
 				returnElements.append("]");
 			}
 		}
