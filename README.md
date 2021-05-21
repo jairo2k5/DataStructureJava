@@ -24,7 +24,7 @@
 - Queue element
 - Spying at the beginning of the queue
 - Dequeue element
-- use API Java Queue + LinkedList
+- Use API Java Queue + LinkedList
 - Priority queues
 - Use API Java PriorityQueue
 
