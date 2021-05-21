@@ -75,5 +75,16 @@ public class StaticStructure<T> {
 		}
 		return false;
 	}
+	
+	public void remove(int position) {
+		if(!(position >= 0 && position < this.size)) {
+			throw new  IllegalArgumentException("Posição não existe!");
+		}
+		for(int i = position; i <= this.size; i++) {
+			this.elements[i] = this.elements[i+1];
+		}
+		this.elements[this.size] = null;
+		this.size--;
+	}
 
 }
