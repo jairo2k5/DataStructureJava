@@ -1,11 +1,11 @@
 package com.jairosilva.queues.tests;
 
-import com.jairosilva.queues.Queue;
+import com.jairosilva.queues.Queuex;
 
 public class DequeueMethod {
 
 	public static void main(String[] args) {
-		Queue<Integer> queue = new Queue<Integer>();
+		Queuex<Integer> queue = new Queuex<Integer>();
 		queue.toQueue(1);
 		queue.toQueue(2);
 		queue.toQueue(3);

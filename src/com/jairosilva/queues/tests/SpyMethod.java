@@ -1,11 +1,11 @@
 package com.jairosilva.queues.tests;
 
-import com.jairosilva.queues.Queue;
+import com.jairosilva.queues.Queuex;
 
 public class SpyMethod {
 
 	public static void main(String[] args) {
-		Queue<String> queue = new Queue<String>();
+		Queuex<String> queue = new Queuex<String>();
 		queue.toQueue("1: 1");
 		queue.toQueue("2: 2");
 		queue.toQueue("3: 3");

@@ -24,21 +24,16 @@ public class StaticStructure<T> {
 	}
 
 	protected boolean add(int position, T element) {
-		if(!(position >= 0 && position < this.size)) {
+		if(!(position >= 0 && position <= this.size)) {
 			throw new  IllegalArgumentException("Posição não existe!");
 		}
-
-		increase();
-
-		// Move all elements
+		this.increase();
 		for(int i = this.size-1; i >= position; i--) {
 			this.elements[i+1] = this.elements[i];
 		}
-
 		this.elements[position] = element;
 		this.size++;
-
-		return false;
+		return true;
 	}
 
 	@SuppressWarnings("unchecked")
