@@ -1,5 +1,4 @@
-<h1 align="center">Main concepts of data structure with Java</h1>
-<p align="center"> Always learning 🚀</p>
+<h1 align="center">Basic concepts of data structure with Java</h1>
 
 ### Vectors
 - Add element at the end of the Vector
